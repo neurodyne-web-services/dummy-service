@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil) //nolint
+	log.Fatal(http.ListenAndServe(":8080", nil)) //nolint
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {

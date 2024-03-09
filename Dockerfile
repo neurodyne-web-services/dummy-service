@@ -1,4 +1,4 @@
-FROM golang:1.21-alpine AS build
+FROM tampler/nws-go-base:latest AS build
 WORKDIR /go/src/github.com/neurodyne-web-services/dummy-service
 
 COPY go.mod main.go ./
