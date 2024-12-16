@@ -1,4 +1,4 @@
-FROM golang:alpine3.19 AS build
+FROM golang:alpine3.21 AS build
 WORKDIR /go/src/github.com/neurodyne-web-services/dummy-service
 
 RUN go env -w GOCACHE=/go-cache && go env -w GOMODCACHE=/gomod-cache
